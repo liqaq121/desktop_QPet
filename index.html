@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>桌宠</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="pet-shell" id="petShell" aria-label="桌宠">
+      <div class="bubble" id="bubble" role="status">我会乖乖待在桌面上。</div>
+
+      <button class="pet" id="pet" type="button" aria-label="拖拽或互动">
+        <img class="girl" src="./roles/1/默认.png" alt="" draggable="false" />
+        <span class="aura aura-one"></span>
+        <span class="aura aura-two"></span>
+        <span class="heart" id="heart">❤</span>
+      </button>
+
+      <div class="context-menu" id="contextMenu" role="menu" aria-hidden="true">
+        <div class="menu-group">
+          <button class="menu-action" id="roleBtn" type="button" role="menuitem" aria-expanded="false">
+            切换人物
+          </button>
+          <div class="submenu-menu" id="roleMenu" role="menu" aria-hidden="true"></div>
+        </div>
+        <div class="menu-group">
+          <button class="menu-action" id="styleBtn" type="button" role="menuitem" aria-expanded="false">
+            切换风格
+          </button>
+          <div class="submenu-menu" id="styleMenu" role="menu" aria-hidden="true"></div>
+        </div>
+        <button class="menu-toggle" id="persistBtn" type="button" role="menuitem" aria-pressed="false">
+          <span class="toggle-dot" aria-hidden="true"></span>
+          记住状态
+        </button>
+        <button class="menu-close" id="closeBtn" type="button" role="menuitem">关闭桌宠</button>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
